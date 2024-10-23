@@ -1,27 +1,31 @@
-// Header.js
 import React from "react";
+import { AppBar, Toolbar, Typography, Button } from "@mui/material";
+import HeaderBasket from "../../e-commerce/HeaderBasket/HeaderBasket";
 
 const Header = () => {
   return (
-    <header className="bg-white shadow">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
-        <div className="text-2xl font-bold">E-com</div>
-        <nav className="space-x-6">
-          <a href="/" className="text-gray-700 hover:text-blue-500">
+    <>
+      <AppBar position="static">
+        <Toolbar>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            My Logo
+          </Typography>
+          <Button color="inherit" href="/">
             Home
-          </a>
-          <a href="/about" className="text-gray-700 hover:text-blue-500">
+          </Button>
+          <Button color="inherit" href="/about">
             About
-          </a>
-          <a href="/services" className="text-gray-700 hover:text-blue-500">
+          </Button>
+          <Button color="inherit" href="/services">
             Services
-          </a>
-          <a href="/contact" className="text-gray-700 hover:text-blue-500">
+          </Button>
+          <Button color="inherit" href="/contact">
             Contact
-          </a>
-        </nav>
-      </div>
-    </header>
+          </Button>
+        </Toolbar>
+      </AppBar>
+      <HeaderBasket />
+    </>
   );
 };
 

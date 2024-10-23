@@ -1,13 +1,14 @@
 import React from "react";
 import Header from "../../components/common/Header/Header";
 import Footer from "../../components/common/Footer/Footer";
+import { Container } from "@mui/material";
 
 const MainLayout = () => {
   return (
-    <div className={`max-w-6xl mx-auto px-4 `}>
+    <Container>
       <Header />
       <Footer />
-    </div>
+    </Container>
   );
 };
 

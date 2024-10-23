@@ -1,26 +1,32 @@
 // Footer.js
 import React from "react";
+import { AppBar, Toolbar, Typography } from "@mui/material";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-6">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-        <div className="text-sm">
+    <AppBar
+      position="static"
+      sx={{ top: "auto", bottom: 0, background: "#333" }}
+    >
+      <Toolbar>
+        <Typography variant="body2" color="inherit" sx={{ flexGrow: 1 }}>
           &copy; 2024 abdullah hamdy alatawwna. All rights reserved.
-        </div>
-        <div className="space-x-4">
-          <a href="/privacy" className="text-gray-400 hover:text-white">
+        </Typography>
+        <Typography variant="body2" color="inherit" sx={{ mr: 2 }}>
+          <a
+            href="/privacy"
+            style={{ color: "inherit", textDecoration: "none" }}
+          >
             Privacy Policy
           </a>
-          <a href="/terms" className="text-gray-400 hover:text-white">
+        </Typography>
+        <Typography variant="body2" color="inherit">
+          <a href="/terms" style={{ color: "inherit", textDecoration: "none" }}>
             Terms of Service
           </a>
-          <a href="/contact" className="text-gray-400 hover:text-white">
-            Contact
-          </a>
-        </div>
-      </div>
-    </footer>
+        </Typography>
+      </Toolbar>
+    </AppBar>
   );
 };
 
