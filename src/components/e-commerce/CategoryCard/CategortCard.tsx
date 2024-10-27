@@ -7,18 +7,9 @@ import {
   Button,
   Typography,
 } from "@mui/material";
+import { TCategory } from "@customTypes/category";
 
-interface CategoryCardProps {
-  categoryName: string;
-  imageUrl: string;
-  onExplore: () => void;
-}
-
-const CategoryCard: React.FC<CategoryCardProps> = ({
-  categoryName,
-  imageUrl,
-  onExplore,
-}) => {
+const CategoryCard: React.FC<TCategory> = ({ title, img, prefix }) => {
   return (
     <Card
       sx={{
@@ -36,8 +27,8 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
       <CardMedia
         component="img"
         height="180"
-        image={imageUrl}
-        alt={categoryName}
+        image={img}
+        alt={title}
         sx={{ borderRadius: "12px 12px 0 0" }}
       />
       <CardContent
@@ -55,7 +46,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
             color: "#333",
           }}
         >
-          {categoryName}
+          {title}
         </Typography>
       </CardContent>
       <CardActions sx={{ justifyContent: "center", paddingBottom: "1rem" }}>
@@ -63,7 +54,6 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
           size="medium"
           variant="contained"
           color="primary"
-          onClick={onExplore}
           sx={{
             textTransform: "none",
             fontWeight: "bold",
